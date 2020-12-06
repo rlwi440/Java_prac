@@ -1,15 +1,26 @@
 package emp.model.vo;
 
-public class Employee {
-	 
-	public static void main(String[]args) {
-		
-		Employee abc = new Employee  ();
-		abc.Test1();
-	}
-	public void  Test1() {
-		System.out.println("본인:베기원");
-		System.out.println("나이:24세");
-		System.out.println("생년월일:97년 10월 1일");
-	}
-}
+
+import emp.run.TestEmp;
+
+public class Employee {	
+	/**
+	 * @author 깔끔한청년
+	 * @date 2020.12.06
+	 * 
+	 */
+
+	 public static void main (String []args){
+		 /**
+		  * @param s1	
+		  */
+		TestEmp s1 = new TestEmp();
+		System.out.println("[필수정보]");
+		System.out.println("1.이름:깔끔한청년");
+		System.out.println("2.나이 :");
+		System.out.println("3.생년월일: ");
+	 	}	
+
+
+	 }
+
