@@ -42,7 +42,7 @@ public class Example {
 		System.out.print( "성적:");
 		double point = vc.nextDouble();
 		
-		System.out.printf("%d학년 %d반 %D번 %S학생 %S은 성적이 %.2f이다", grade,clss,num,name,sex,point);
+		System.out.printf("%d학년 %d반 %d번 %S학생 %S은 성적이 %.2f이다", grade,clss,num,name,sex,point);	
 	}
 
 }
