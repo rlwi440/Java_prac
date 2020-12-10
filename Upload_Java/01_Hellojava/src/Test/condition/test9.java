@@ -4,14 +4,22 @@ import java.util.Scanner;
 
 public class Test9 {
 	public static void main(String []args) {
+		/**
+		 * @author 깔끔한청년
+		 * @Date 2020.12.11
+		 */
 		Test9 ki= new Test9();
 	
 		ki.test();
 	}
 	
 	public void test() {
+		/**
+		 * @param char,int,String 
+		 * @throws case method 활용 
+		 */
 		char ch;
-		int num=0; int sum=0; 
+		int num=0; int B=0; String A=" ";  int b=0; String a= " "; 
 	
 		System.out.println("*********주메뉴*********");
 		System.out.println("a. 불고기버거 ------------5000");
@@ -33,49 +41,64 @@ public class Test9 {
 		System.out.println("\t***********************");
 		System.out.println("음료수를선택하세요 : ");
 		 num=sc.nextInt();
-		if(ch=='a'||'e'>ch||num<=1||num==4) {
-			System.out.println("번호를 잘못누르셨습니다.영업종료합니다.");
-			return;
-		}
+	
+
+		
 		switch(ch) {
 		case 'a' :
-			System.out.print("불고기 버거 , ");
-			sum+=5000;
+			B=5000;
+			A="불고기버거";
 			break;
 		case 'b' :
-			System.out.print("새우버거 , ");
-			sum+=4000;
+			B=4000;
+			A="새우버거";
 			break;
+			
 		case 'c' :
-			System.out.print("치킨버거 , ");
-			sum+=7000;
+			B=4500;
+			A="치킨버거";
 			break;
 		case 'd' :
-			System.out.print("한우버거 , ");
-			sum+=10000;
+			B=10000;
+			A="한우버거";
 			break;
+			
 		case 'e' :
-			System.out.print("디버거  , ");
-			sum+=7000;
+			B=7000;
+			A="한우버거";
 			break;
+			
+			default :
+				System.out.println("잘못입력하셨습니다.영업을 종료합니다.");
+				return;
+				
+		
 		} 
 		switch(num) {
 		case 1:
-			sum+=1500;
-			System.out.println("콜라는 총 "+sum+"원 입니다.!");
+			b=1500;
+			a="콜라";
 			break;
 		case 2:
-			System.out.print("사이다, ");
-			sum+=1500;
-			break;	
+			b=1500;
+			a="사이다";
+			break;
 		case 3:
-			System.out.println("밀크쉐이크: ");
-			sum+=2500;
+			b=2500;
+			a="밀크쉐이크";
 			break;
+		
 		case 4 :
-			System.out.print("레드불: ");
-			sum+=3000;
+			b=3000;
+			a="레드불";
 			break;
+			
+			default:
+				System.out.println("잘못입력하셨습니다영업을 종료합니다.");
+				return;
+			
 				}	
+		System.out.println((A+a) +"은(는) 총" +(B+b) + "원원입니다.");
 			}	
+	
 		}
