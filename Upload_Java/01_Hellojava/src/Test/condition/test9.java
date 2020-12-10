@@ -74,7 +74,7 @@ public class Test9 {
 			break;
 		case 4 :
 			System.out.print("레드불: ");
-			System.out.println("레드불은 총 "+sum+"원 입니다.!");
+			sum+=3000;
 			break;
 				}	
 			}	
