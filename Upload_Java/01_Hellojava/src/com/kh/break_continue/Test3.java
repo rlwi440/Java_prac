@@ -13,7 +13,6 @@ public class Test3 {
 		ki.test();
 	}
 	public void test() {
-		int a=0;
 		Scanner sc =new Scanner(System.in);
 		
 		System.out.println("정수를 입력하세요.");
