@@ -3,6 +3,7 @@ package kh.java.test.array;
 public class Test2 {
 		/**
 		 * string[] name  배열을 선언후   배열 인덱스로 바나나 출력 
+		 * name[4] 입니다. 딸기=0, 복숭아 =1,키위 =2,사과 =3, 바나나 =4
 		 * @author 깔끔한 청년
 		 * @Date 2020.12.14
 		 * 
