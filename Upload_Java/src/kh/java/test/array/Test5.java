@@ -25,7 +25,7 @@ class Test5 {
 		}else {
 			arr[i]=num.charAt(i);
 		}
-		System.out.println(arr[i]);
+		System.out.print(arr[i]);		//print 수정
 	}
 	}
-}
+} 
