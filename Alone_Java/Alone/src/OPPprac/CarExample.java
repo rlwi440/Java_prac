@@ -1,39 +1,27 @@
 package com.method.prac;
 /**
- *메소드 선언부
- *리턴값이 없는 메소드 :void  return 문 예
- *
- *
+ *  메소드 호출부
+ * 
  *@author 깔끔한청년
- *@Date 2020.12.20
+ *@Date  2020.12.20
  */
 
-public class Car {
-	int gas;		// 필드 
-	
-	void setGas(int gas) {
-		this.gas=gas;
-	}
-	
-	boolean isLeftGas() {
-		if(gas==0) {
-			System.out.println("gas가 없습니다.");
-			return false;
+public class CarExample {
+	public static void main(String[] args) {
+		Car my=new Car();
+		 
+		my.setGas(5);
+		
+		boolean gasState =my.isLeftGas();
+		if(gasState) {
+			System.out.println("출발합니다 : ");
+			my.run();
 		}
-		System.out.println("gas가 있습니다");
-		return true;
-	}
-	
-	void run() {
-		while(true) {
-			if(gas>0) {
-				System.out.println("달립니다.(gas잔량:" +gas+ ")");
-				gas-=1;
-			}else {
-				System.out.println("멈춥니다.(gas잔량:" +gas+ ")");
-				return;
-			}
+		if(my.isLeftGas()) {
+			System.out.println("gas를 주입할 필요가 없습니다.");
+		}else {
+			System.out.println("gas를 주입하세요");
 		}
 	}
-}
 
+}
