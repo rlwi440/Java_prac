@@ -3,6 +3,11 @@ package com.oop.movie.entity.Movie;
 import javax.xml.ws.Response;
 
 public class Movie {
+    /**
+     * 반드시 캡슐화를 적용할것
+     * @author 깔끔한청년
+     * @Date  2020.12.22
+     */
 	private  String MovieTitle;
 	private  String director;
 	private  String casting;
