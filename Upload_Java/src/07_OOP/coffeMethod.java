@@ -1,63 +1,46 @@
 package com.oop.coffe.dto.Coffe;
 
-public class CoffeManger {
-	/**
-	 * @author 깔끔한 청년
-	 * @Date 2020.12.22 Coffee 멤버변수 원산지 origin, 지역 location 기본생성자, 모든필드초기화생성자
-	 *       getter, setter 출력메소드 ()
-	 */
-	
-	String origin = "";
-	   
-	   String location = "";
-	   
-	   String[] Coffee = new String[3];
-	   
-	   public CoffeManger() {
-	      
-	   }
-	   
-	   public CoffeManger(String origin, String location) {
-	      this.origin = origin;
-	      this.location = location;
-	   }
+import java.util.Scanner;
+/**
+ * 1. Coffee 클래스에 대한 객체 배열(세계3대커피정보) 선언함. 배열크기 
+ *	2. 사용자에게 키보드로 세계3대 커피정보를 입력받아, 각 객체에 기록함
+ *	3. 출력 확인함
+ * @author 깔끔한청년
+ * @Date 2020.12.22
+ */
 
-	   public String getOrigin() {
-	      return origin;
-	   }
+public class CoffeManager {
+	private String origin;
+	private String location;
 
-	   public void setOrigin(String origin) {
-	      this.origin = origin;
-	   }
+	private Coffe[] coffee = new Coffe[3]; // 멤버변수
 
-	   public String getLocation() {
-	      return location;
-	   }
+	public CoffeManager() {
 
-	   public void setLocation(String location) {
-	      this.location = location;
-	   }
+		Scanner scan = new Scanner(System.in);
 
-	   public String[] getCoffee() {
-	      return Coffee;
-	   }
+		for (int i = 0; i < coffee.length; i++) {
 
-	   public void setCoffee(String[] coffee) {
-	      Coffee = coffee;
-	   }
-	   
-	   
-	   public void printScan() {
-	      System.out.println("====<<세계3대 커피>>====");
-	      System.out.println("=====================");
-	      System.out.println("원산지=============지역 ");
-	      
-	      for(int i=0; i<Coffee.length; i++) {
-	         System.out.println(Coffee[i]);
-	      }
-	      
-	      System.out.println("=====================");
-	      
-	         
-	   }
+			System.out.print("세계 커피의 나라를 입력해주세요 :");
+			origin = scan.next();
+
+			if (origin.isEmpty())
+				origin = "해당 나라를 입력하지않았습니다.";
+			System.out.print("세계 커피의 지역을 입력해주세요 :");
+			location = scan.next();
+			if (location.isEmpty())
+				location = "해당 나라를 입력하지않았습니다.";
+			coffee[i] = new Coffe(origin, location);
+
+		}
+
+		System.out.println("====<<세계3대 커피>>====");
+		System.out.println("=====================");
+		System.out.println("원산지=============지역 ");
+		for (int i = 0; i < coffee.length; i++) {
+				coffee[i].printScan();	
+		}
+		System.out.println("=====================");
 	}
+
+}
