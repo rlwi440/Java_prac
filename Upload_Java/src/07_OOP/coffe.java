@@ -1,38 +1,59 @@
 package com.oop.coffe.dto.Coffe;
 
-import java.util.Scanner;
+public class Coffe {
+	/**
+	 * @author 깔끔한 청년
+	 * @Date 2020.12.22 Coffee 멤버변수 원산지 origin, 지역 location 기본생성자, 모든필드초기화생성자
+	 *       getter, setter 출력메소드 ()
+	 */
+	
+	String origin = "";
+	   
+	   String location = "";
+	   
+	   String[] Coffee = new String[3];
+	   
+	   public Coffe() {
+	      
+	   }
+	   
+	   public Coffe(String origin, String location) {
+	      this.origin = origin;
+	      this.location = location;
+	   }
 
-/**
- * 
- * 1. Coffee 클래스에 대한 객체 배열(세계3대커피정보) 선언함. 배열크기 3. 2. 사용자에게 키보드로 세계3대 커피정보를 입력받아,
- * 각 객체에 기록함 3. 출력 확인함
- * @author 깔끔한청년
- * @Date 2020.12.22
- *
- */
-public class Run {
+	   public String getOrigin() {
+	      return origin;
+	   }
 
-   public static void main(String[] args) {
-            
-	   CoffeManger coffee = new CoffeManger();
-      
-      String origin = "";
-      String location = "";
-      
-      Scanner scan = new Scanner(System.in);
-      
-      for(int i=0; i < coffee.Coffee.length; i++) {
-         
-         System.out.print("세계 커피의 나라를 입력해주세요 :");
-         origin = scan.next();
-         System.out.print("세계 커피의 지역을 입력해주세요 :");
-         location = scan.next();
-         
-         coffee.Coffee[i] = origin+"           "+location;
-      }
-      
-      
-      coffee.printScan();
-      
-   }
-}
+	   public void setOrigin(String origin) {
+	      this.origin = origin;
+	   }
+
+	   public String getLocation() {
+	      return location;
+	   }
+
+	   public void setLocation(String location) {
+	      this.location = location;
+	   }
+
+	   public String[] getCoffee() {
+	      return Coffee;
+	   }
+
+	   public void setCoffee(String[] coffee) {
+	      Coffee = coffee;
+	   }
+	   
+	   
+	   public void printScan() { 
+	      System.out.println(getOrigin()+"    " +getLocation() );
+	   }
+	}
+		 
+	 
+	
+	
+	
+
