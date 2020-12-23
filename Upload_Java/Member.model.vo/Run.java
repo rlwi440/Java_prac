@@ -1,4 +1,4 @@
-
+package Member.model.vo;
 // giwon.point.MemberManager
 
 public class RUN {
@@ -26,33 +26,16 @@ public class RUN {
 	       */
 		
 		MemberManager member = new MemberManager();
-		
+		System.out.println("-------------<회원정보>-----------");
 		member.silverInsert(new Slaver("홍길동", "Slaver", 1000));
 		member.silverInsert(new Slaver("김말뚱 ", "Slaver", 2000));
 		member.silverInsert(new Slaver("고길동", "Slaver", 3000));
 		member.goldInsert(new Gold("김회장", "Gold", 1000));
 		member.goldInsert(new Gold("이화장", "Gold", 2000));
-		member.goldInsert(new Gold("오회", "Gold", 3000));
+		member.goldInsert(new Gold("오회장", "Gold", 3000));
+		member.vipInsert(new Vip("깔끔한회장","Vip",10000));
+		member.VVipInsert(new VVip("배회장","VVip",100000));
+		
 		member.printData();
 		}
-		
 	}
-
-
-/**
- * javascript의 this 
- * 
- * scope(x) -> 
- * window있는 변수를 가지고 오겠다.
- * 
- * event 제외 
- * 
- * var aaa = 'aaa';
- * 
- * function a(){
- *      var aaa = 'ttt';
- *      console.log(this.aaa);
- * }
- * 
- * console.log(aaa);
- */
