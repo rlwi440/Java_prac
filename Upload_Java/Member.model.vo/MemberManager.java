@@ -3,6 +3,12 @@ package Member.model.vo;
 //giwon.point.Slaver
 //giwon.point.Gold
 public class MemberManager {
+	/**
+	 *실습문제 - 포인트 관리식스템의   상속관계 만들기 회원등급을 추상화 하여 Member클래스 를 작성해 중복을 제거하세요 
+	 * 각 회원별 오버라이딩 할것.
+	 * @author 깔끔한청년
+	 * @Date 2020.12.27 
+	 */
 
 	   String member, grade;
 	   double point;
