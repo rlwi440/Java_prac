@@ -4,8 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Test {
-	public static final int length = 0;
+public class Member {
 	private int memberNO;
 	private String  memberName;
 	private int height;
@@ -13,7 +12,7 @@ public class Test {
 	private Calendar birth;
 
 	
-	public Test(int memberNO ,String memberName,int height, int weight,Calendar birth) {
+	public Member(int memberNO ,String memberName,int height, int weight,Calendar birth) {
 		super();
 		this.birth=birth;
 		this.height=height;
@@ -69,7 +68,7 @@ public class Test {
 		
 		Date date =new Date(difference);		//format 공부
 		SimpleDateFormat sdf =new  SimpleDateFormat("yyyy-MM-dd");
-		return memberName +"이름 " +memberNO+"회원"+height+"키"+ weight+"몸무게"
-				+ "생일:"+ sdf.format(date);	//
+		return "  이름 :   " +memberName +   "  회원 :  " +  memberNO+"   키 : "+height+"   몸무게 : "+ weight
+				+ " 생일:  "+ sdf.format(date);	// 정리 하기 연습 ..  문자열
 	}
 }
