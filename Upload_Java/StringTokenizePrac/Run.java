@@ -29,7 +29,7 @@ public class Run {
 			cal.set(Calendar.MONTH, Integer.parseInt(temp[4].substring(4, 6)) - 1); 
 			cal.set(Calendar.DATE, Integer.parseInt(temp[4].substring(6))); 
 			arr[i] = new Member(Integer.parseInt(temp[0]), temp[1], Integer.parseInt(temp[2]),
-					Integer.parseInt(temp[3]), cal);//
+					Integer.parseInt(temp[3]), cal);
 		}
 		for (Member k : arr) {
 			System.out.println(k.information());
