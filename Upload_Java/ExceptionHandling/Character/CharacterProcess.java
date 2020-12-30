@@ -24,4 +24,4 @@ public class CharacterProcess {
 		}
 		return count;
 	}
-}c
+}
