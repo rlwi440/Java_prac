@@ -21,7 +21,7 @@ public class CharacterProcess {
 			} else if ((s.charAt(i) >= 'a' && s.charAt(i) <= 'z') || (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')) {
 				count++;
 			}
-		}
+		}			// test
 		return count;
 	}
 }
