@@ -44,12 +44,12 @@ public class MusicMenu {
 				System.out.println("======================");
 				System.out.println("곡명을 입력하세요 : ");
 				System.out.println("======================");
-				String title1 = sc.nextLine();
+				 title = sc.nextLine();	// String 초기값만 선언해도 가능 메모리낭비
 				System.out.println("======================");
 				System.out.println("가수 를 입력하세요 : ");
 				System.out.println("======================");
-				String Singer1 = sc.nextLine();
-				manager.addList(new Music(title1, Singer1));
+				 Singer = sc.nextLine();	//메모리낭비
+				manager.addList(new Music(title, Singer));
 				System.out.println(manager.selectList());
 				break;
 			case 4:
@@ -85,8 +85,9 @@ public class MusicMenu {
 				System.out.println("가수명 검색을 합니다 :");
 				System.out.println("======================");
 				String searchsinger = sc.nextLine();
-				System.out.println(manager.searchMusicBySinger(searchsinger));
+				System.out.println(manager.searchMusicBySinger(searchsinger));	
 				break;
+				
 			case 8:
 				sortMenu();
 				break;
@@ -120,19 +121,20 @@ public class MusicMenu {
 		sc.nextLine();
 
 		switch (choice) {
-			case 1 :		//매서드를 추가하였습니다 
+			case 1 :		
 				manager.searchMusicByTitle(new MusicTitleAscending());
 				break;
-			case 2 :		//매서드를 추가..
-				manager.searchMusicByTitleReversed(new MusicTitleAscending());
+			case 2 :		
+				manager.searchMusicByTitle(new MusicTitleAscending().reversed());//reversed 문자열 거꾸로 뒤집기 
 				break;
-			case 3 :		 //매서드 추가
+			
+			case 3 :		
 				manager.searchMusicBySinger(new SingerTitleAscending());
 				break;	
-			case 4 :		//매서드를 추가했다.. 과연 정답일까 
-				manager.searchMusicByTitleReversed(new SingerTitleAscending());
+			
+			case 4 :		
+				manager.searchMusicBySinger(new SingerTitleAscending().reversed()); 
 				break;	
-		
 		}
 	}
 }

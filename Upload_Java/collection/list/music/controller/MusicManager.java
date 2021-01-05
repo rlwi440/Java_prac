@@ -36,11 +36,13 @@ public class MusicManager {
 
 	// 4. 특정곡을 삭제하는 메소드(제목을 전달받아 검색후, 최초로 검색된 음악을 삭제)
 	// 삭제여부를 리턴 equals 사용해 true,false비교
-	public boolean removeMusic(String s) {
+	public boolean removeMusic(String title) {	//for문으로 하기 
 		// remove 삭제가 될경우
-		if (list.equals(new Music(s, ""))) {
-			list.remove(new Music(s, " "));
-			return true;
+		for(Music m : list ) {		//for each문 사용 for(파라미터 : 생성자)
+			if(m.getTitle().equals(title)) {		//배열은 인덱스
+				list.remove(m);
+				return true;
+			}
 		}
 		System.out.println("삭제할 곡  이 없습니다");
 		return false;
@@ -58,22 +60,27 @@ public class MusicManager {
 	}
 	// 6. 특정곡이 있는지 검사하는 메소드 : 복수개의 결과가 나올수 있음.
 	// (곡명일부로 검색해서 해당곡이 있다면, 곡정보(제목/가수)를 출력하고, 없다면, "검색결과가 없습니다"출력)
+	/**
+	 * 처음에 if(list.contains(new Music(searchtitle,""))
+	 */
+	int title =0;
 	public List<Music>searchMusicByTitle(String searchtitle){ 
 		List<Music>searchMusicByTitle =new ArrayList<Music>();
-		if(list.contains(new Music(searchtitle,""))) {	//contains 문자열 포함여부 확인
-			int titleindex= list.indexOf(new Music(searchtitle, ""));
-			searchMusicByTitle.add(list.get(titleindex));
+			for(Music m: list){
+				if(m.getTitle().equals(title))
+			searchMusicByTitle.add(m);
 			return searchMusicByTitle;
 		}
 		System.out.println("검색결과가 없습니다 ");
 		return null;		
 	}
 	//7. 가수명으로 검색 메소드 : 복수개의 결과가 나올수 있음.
-	public List<Music> searchMusicBySinger(String singerTitleAscending){
+	int singer=0;
+	public List<Music> searchMusicBySinger(String searchsinger){
 		List<Music>searchMusicBySinger =new ArrayList<Music>();
-		if(list.contains(new Music("", singerTitleAscending))){
-			int singeridx=list.indexOf(new Music("", singerTitleAscending));
-			searchMusicBySinger.add(list.get(singeridx));
+		for(Music m: list){		//for each 문 연습  for(파라미터  m : 생성자)  생각하기 
+			if(m.getSinger().equals(singer)) //if (m.get
+			searchMusicBySinger.add(m);
 			return searchMusicBySinger;
 		}
 		System.out.println("검색결과가 없습니다.");
@@ -86,23 +93,15 @@ public class MusicManager {
 		
 	}
 
-	public void searchMusicByTitleReversed(MusicTitleAscending musicTitleAscending) {
+
+	public void searchMusicByTitle(Comparator<Music> reversed) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void searchMusicByTitleReversed(SingerTitleAscending singerTitleAscending) {
-		// TODO Auto-generatd method stub
-		
-	}
-
-	public void searchMusicBySinger(SingerTitleAscending singerTitleAscending) {
+	public void searchMusicBySinger(Comparator<Music> reversed) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	public void searchMusicByTitle(MusicTitleAscending musicTitleAscending) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }
