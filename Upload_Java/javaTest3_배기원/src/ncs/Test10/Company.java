@@ -14,7 +14,7 @@ public class Company {
 		System.out.println("===========================");
 		System.out.println("인센티브 100 지급 ");
 		((Secreatary) employees[0]).incentive(100);
-//		((Sales) employees[1]).incentive(100);		//어기서 모르겠다 ..
+		((Sales) employees[1]).incentive(100);		
 		System.out.println("naem\t department \t salray\t tax");
 		System.out.println("=====================================");
 		for(int i=0; i<employees.length;i++) {

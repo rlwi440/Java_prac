@@ -1,7 +1,12 @@
 package nsc.Test8;
 
 public class UserTest {
-
+	/**
+	 *상속받은 Object 클래스의 메소드를 오버라이딩하여 프로그램을 작성한다.
+		3개의 User 객체를 생성하여 배열에 셋팅한 후 각 객체의 모든 정보를 처리 출력한다.
+ 		@author 깔끔한청년
+	 * 	@Date 2020/01/10
+	 */
 	public static void main(String[] args) {
 		User [] users =new User[3];
 		users[0] =new User("user01", "pass01","김철수",32 ,'M',"010-1234-5678");

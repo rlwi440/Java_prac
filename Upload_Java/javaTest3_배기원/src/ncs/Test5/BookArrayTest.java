@@ -1,6 +1,11 @@
 package ncs.Test5;
 
 public class BookArrayTest {
+	/**
+	 * 3개의 Book 객체를 배열로 생성하여 각각의 정보와 할인된 가격을 출력한다.
+	 * @author 깔끔한청년
+	 * @Date 2020/01/10
+	 */
 	public static void main(String[] args) {
 		Book bArray[]=new Book[3];
 		bArray[0]= new Book("자바의정석","남궁성","도우출판 ",30000,0.1);

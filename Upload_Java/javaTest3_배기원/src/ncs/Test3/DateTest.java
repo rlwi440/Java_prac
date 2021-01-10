@@ -6,10 +6,13 @@ import java.util.GregorianCalendar;
 
 public class DateTest {
 	/**
+	 * GregorianCalendar 클래스를 사용하여, 현재 년도와 비교한 나이를 계산하고 생일의 요일을 출력
+		한다. 출력시 SimpleDateFormat 을 사용하여 출력한다.
+	 * @author 깔끔한청년
+	 * @Date 2020/01/10
 	 * 	생일 : 1987년 5월 27일 수요일	
 		현재 : 2016년 4월 18일
-		나이 : 29 세
-	 * 
+		나이 : 29 세 
 	 */
 public static void main(String[] args) {
 	SimpleDateFormat sim =new SimpleDateFormat("yyyy년 MM월 dd일 ");	//SimpleDateFormat 날짜형식지정구간
