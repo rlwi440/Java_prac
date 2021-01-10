@@ -1,4 +1,4 @@
-package nsc.Test8;
+package ncs.Test8;
 
 public class User {
 	private String id;
